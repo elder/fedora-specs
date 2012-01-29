@@ -1,0 +1,49 @@
+%global uuid remove-accessibility-icon@martin-weusten.de
+
+Name:      gnome-shell-extension-remove-accessibility-icon
+Version:   20111008
+Release:   1%{?dist}
+Summary:   A gnome-shell extensions for removing the accessibility icon
+
+Group:     User Interface/Desktops
+License:   BSD
+URL:       http://martin-weusten.de/projects/gnomeshell-extensions/remove-accessibility-icon/
+Source0:   http://martin-weusten.de/wp-content/uploads/2011/05/remove-accessibility-icon%{version}-1019.tar.gz
+BuildArch: noarch
+
+Requires:  gnome-shell >= 3.2.0
+
+%description
+This simple extension does nothing more than to remove the accessibility
+icon in the top right corner of the GNOME panel.
+
+
+%prep
+%setup -q -n %{uuid}
+
+%build
+# Nothing to build
+
+%install
+rm -rf %{buildroot}
+mkdir -p %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}
+install -Dp -m 0644 {extension.js,metadata.json,stylesheet.css} \
+  %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/
+
+
+%files
+%defattr(-,root,root,-)
+%doc COPYING README
+%{_datadir}/gnome-shell/extensions/%{uuid}/
+
+
+%changelog
+* Mon Nov 07 2011 Elder Marco <eldermarco@fedoraproject.org> - 20111008-1
+- Update to work with gnome-shell >= 3.2.0
+
+* Sat Jun 04 2011 Fabian Affolter <fabian@bernewireless.net> - 20110603-1
+- README and COPYING added
+- License is Modified BSD License
+
+* Thu Jun 02 2011 Fabian Affolter <fabian@bernewireless.net> - 20110529-1
+- Initial package for Fedora
