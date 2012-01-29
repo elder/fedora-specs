@@ -1,0 +1,15 @@
+Descrição
+=========
+
+    Arquivos .spec utilizados para criar pacotes rpm para o fedora, RHEL, CentOS
+ou ainda, o Scientific Linux (EPEL). O foco principal é, no entanto, o fedora.
+Alguns desses pacotes eu mantenho ou co-mantenho nos repositórios oficiais do
+ou através do EPEL. Outros são pacotes de uso pessoal que criei.
+    Sinta-se livre para criar seus rpms utilizando eles também.
+
+Licença
+=======
+GPLv3+
+
+---
+Elder Marco
