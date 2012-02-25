@@ -1,8 +1,8 @@
-%global date 20120130
+%global date 20120225
 
 Name:           plowshare
 Version:        0.9.4
-Release:        0.26.%{date}git%{?dist}
+Release:        0.27.%{date}git%{?dist}
 Summary:        Download and upload files from file-sharing websites
 Summary(pt_BR): Baixe e carregue arquivos em sites de compartilhamento
 Summary(ru):    терминальный аплоадер/доунлоадер для наиболее популярных файлообменников
@@ -82,6 +82,9 @@ rm -rf %{buildroot}
 %{_mandir}/man5/%{name}.conf.5.*
 
 %changelog
+* Sun Feb 25 2012 Elder Marco <eldermarco@fedoraproject.org> - 0.9.4-0.27.20120225git
+- New upstream snapshot
+
 * Wed Feb 01 2012 Elder Marco <eldermarco@fedoraproject.org> - 0.9.4-0.26.20120130git
 - New upstream snapshot
 
