@@ -1,16 +1,15 @@
-%global   src_name     cwp_su_all
-%global   src_version  43R1
-%global   _optdir      /opt
+%global   src_name  cwp_su_all
+%global   _optdir   /opt
 
 Name:      seismicunix
-Version:   43.1 
+Version:   43R1
 Release:   1%{?dist}
 Summary:   Open Source software for seismic research and processing
 
 Group:     Applications/Engineering 
 License:   BSD 
 URL:       http://www.cwp.mines.edu/cwpcodes/ 
-Source0:   ftp://ftp.cwp.mines.edu/pub/cwpcodes/%{src_name}_%{src_version}.tgz
+Source0:   ftp://ftp.cwp.mines.edu/pub/cwpcodes/%{src_name}_%{version}.tgz
 Source1:   %{name}.sh
 Source2:   %{name}.csh
 Patch0:    %{name}-%{version}-makefile-config.patch
@@ -45,8 +44,8 @@ cd src
 %patch1 -p1
 
 %build
-export CWPROOT="%{_builddir}/%{name}-%{version}"
 cd src
+export CWPROOT="%{_builddir}/%{name}-%{version}"
 
 # These codes are essential. Please, don't change anything
 # below.
@@ -93,5 +92,5 @@ rm -rf %{buildroot}
 %{_sysconfdir}/profile.d/%{name}.*
 
 %changelog
-* Fri Jan 28 2012 Elder Marco <eldermarco@fedoraproject.org> - 43.1-1
+* Fri Jan 28 2012 Elder Marco <eldermarco@fedoraproject.org> - 43R1-1
 - Initial package
