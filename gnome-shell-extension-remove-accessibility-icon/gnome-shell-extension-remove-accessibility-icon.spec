@@ -2,7 +2,7 @@
 
 Name:      gnome-shell-extension-remove-accessibility-icon
 Version:   20111008
-Release:   1%{?dist}
+Release:   2%{?dist}
 Summary:   A gnome-shell extensions for removing the accessibility icon
 
 Group:     User Interface/Desktops
