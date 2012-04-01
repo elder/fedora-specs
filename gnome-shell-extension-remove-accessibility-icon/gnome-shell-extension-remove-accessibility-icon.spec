@@ -9,6 +9,7 @@ Group:     User Interface/Desktops
 License:   BSD
 URL:       http://martin-weusten.de/projects/gnomeshell-extensions/remove-accessibility-icon/
 Source0:   http://martin-weusten.de/wp-content/uploads/2011/05/remove-accessibility-icon%{version}-1019.tar.gz
+Patch0:    gnome-3.4.patch
 BuildArch: noarch
 
 Requires:  gnome-shell >= 3.2.0
@@ -20,6 +21,8 @@ icon in the top right corner of the GNOME panel.
 
 %prep
 %setup -q -n %{uuid}
+
+%patch0 -p1
 
 %build
 # Nothing to build
@@ -38,6 +41,9 @@ install -Dp -m 0644 {extension.js,metadata.json,stylesheet.css} \
 
 
 %changelog
+* Sun Apr 01 2012 Elder Marco <eldermarco@fedoraproject.org> - 20111008-2
+- Workaround to fix problem with gnome-shell 3.4
+
 * Mon Nov 07 2011 Elder Marco <eldermarco@fedoraproject.org> - 20111008-1
 - Update to work with gnome-shell >= 3.2.0
 
