@@ -2,7 +2,7 @@
 
 Name:      gnome-shell-extension-remove-accessibility-icon
 Version:   20111008
-Release:   2%{?dist}
+Release:   3%{?dist}
 Summary:   A gnome-shell extensions for removing the accessibility icon
 
 Group:     User Interface/Desktops
@@ -41,8 +41,11 @@ install -Dp -m 0644 {extension.js,metadata.json,stylesheet.css} \
 
 
 %changelog
-* Sun Apr 01 2012 Elder Marco <eldermarco@fedoraproject.org> - 20111008-2
+* Sun Apr 01 2012 Elder Marco <eldermarco@fedoraproject.org> - 20111008-3
 - Workaround to fix problem with gnome-shell 3.4
+
+-* Fri Jan 13 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 20111008-2
+-- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
 
 * Mon Nov 07 2011 Elder Marco <eldermarco@fedoraproject.org> - 20111008-1
 - Update to work with gnome-shell >= 3.2.0
